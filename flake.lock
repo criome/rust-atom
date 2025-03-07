@@ -1,0 +1,96 @@
+{
+  "nodes": {
+    "atom": {
+      "locked": {
+        "lastModified": 1740578955,
+        "narHash": "sha256-cfQd23xSpKB7AIVNjoHRcKwR/h4lJY9Syi6Mu/NWX9Y=",
+        "owner": "LiGoldragon",
+        "repo": "atom",
+        "rev": "e9b437bf60607fdfa27e49937561b9e1f8682863",
+        "type": "github"
+      },
+      "original": {
+        "owner": "LiGoldragon",
+        "repo": "atom",
+        "type": "github"
+      }
+    },
+    "atom_2": {
+      "locked": {
+        "lastModified": 1740578955,
+        "narHash": "sha256-cfQd23xSpKB7AIVNjoHRcKwR/h4lJY9Syi6Mu/NWX9Y=",
+        "owner": "LiGoldragon",
+        "repo": "atom",
+        "rev": "e9b437bf60607fdfa27e49937561b9e1f8682863",
+        "type": "github"
+      },
+      "original": {
+        "owner": "LiGoldragon",
+        "repo": "atom",
+        "type": "github"
+      }
+    },
+    "crane": {
+      "locked": {
+        "lastModified": 1741148495,
+        "narHash": "sha256-EV8KUaIZ2/CdBXlutXrHoZYbWPeB65p5kKZk71gvDRI=",
+        "owner": "ipetkov",
+        "repo": "crane",
+        "rev": "75390a36cd0c2cdd5f1aafd8a9f827d7107f2e53",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ipetkov",
+        "repo": "crane",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1734649271,
+        "narHash": "sha256-4EVBRhOjMDuGtMaofAIqzJbg4Ql7Ai0PSeuVZTHjyKQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "d70bd19e0a38ad4790d3913bf08fcbfc9eeca507",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-atom": {
+      "inputs": {
+        "atom": "atom_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1741090188,
+        "narHash": "sha256-r7Qp67m2JKpz568acpB/0T87Efue2qClq7+FO5774c0=",
+        "owner": "criome",
+        "repo": "nixpkgs-atom",
+        "rev": "3a317ae9550b659c42ee31363353623958bf2c63",
+        "type": "github"
+      },
+      "original": {
+        "owner": "criome",
+        "repo": "nixpkgs-atom",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "atom": "atom",
+        "crane": "crane",
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-atom": "nixpkgs-atom"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
