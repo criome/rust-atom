@@ -1,5 +1,8 @@
+let
+  inherit (get.nixpkgs-atom) pkgs;
+
+in
 {
-  Pkgs = get.nixpkgs-atom.pkgs;
+  Pkgs = pkgs;
   Crane-lib = get.crane.mkLib pkgs;
-  MkAtom = mod.mkRustAtom;
 }
