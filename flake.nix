@@ -2,7 +2,8 @@
   description = "rust-atom";
 
   inputs = {
-    atom.url = "github:LiGoldragon/atom";
+    atom.url = "github:LiGoldragon/atom/atomicFlake-v1";
+    system.url = "github:criome/system";
 
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 

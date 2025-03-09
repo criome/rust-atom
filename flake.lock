@@ -2,15 +2,16 @@
   "nodes": {
     "atom": {
       "locked": {
-        "lastModified": 1740578955,
-        "narHash": "sha256-cfQd23xSpKB7AIVNjoHRcKwR/h4lJY9Syi6Mu/NWX9Y=",
+        "lastModified": 1741525624,
+        "narHash": "sha256-F5HbIUenQo+jOhEF6aw4SVQ3ZSTqTiv3ZDtI6TzK19w=",
         "owner": "LiGoldragon",
         "repo": "atom",
-        "rev": "e9b437bf60607fdfa27e49937561b9e1f8682863",
+        "rev": "901017135c6e2e069d9eb61ef6bf3ad4ec8f8dbd",
         "type": "github"
       },
       "original": {
         "owner": "LiGoldragon",
+        "ref": "atomicFlake-v1",
         "repo": "atom",
         "type": "github"
       }
@@ -32,11 +33,11 @@
     },
     "crane": {
       "locked": {
-        "lastModified": 1741148495,
-        "narHash": "sha256-EV8KUaIZ2/CdBXlutXrHoZYbWPeB65p5kKZk71gvDRI=",
+        "lastModified": 1741481578,
+        "narHash": "sha256-JBTSyJFQdO3V8cgcL08VaBUByEU6P5kXbTJN6R0PFQo=",
         "owner": "ipetkov",
         "repo": "crane",
-        "rev": "75390a36cd0c2cdd5f1aafd8a9f827d7107f2e53",
+        "rev": "bb1c9567c43e4434f54e9481eb4b8e8e0d50f0b5",
         "type": "github"
       },
       "original": {
@@ -87,7 +88,23 @@
         "atom": "atom",
         "crane": "crane",
         "nixpkgs": "nixpkgs",
-        "nixpkgs-atom": "nixpkgs-atom"
+        "nixpkgs-atom": "nixpkgs-atom",
+        "system": "system"
+      }
+    },
+    "system": {
+      "locked": {
+        "lastModified": 1741520211,
+        "narHash": "sha256-xHifvvYmRbOeUwQfo3D9mTHbh4oBmhg9iNhNGCuK8fk=",
+        "owner": "criome",
+        "repo": "system",
+        "rev": "ddffaa28acbcf95373bd8ed2d142ec9e6f6becbf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "criome",
+        "repo": "system",
+        "type": "github"
       }
     }
   },
