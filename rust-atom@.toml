@@ -15,3 +15,7 @@ name = "nixpkgs-atom"
 [fetch.crane]
 name = "crane"
 type = "flake"
+
+[fetch.rust-overlay]
+name = "rust-overlay"
+type = "flake"
