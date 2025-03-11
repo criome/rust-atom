@@ -12,16 +12,19 @@ let
 
   finalCraneLib = if hasToolchainFile then customCraneLib else mod.crane-lib;
 
-  args = { inherit src; };
+  crateNamedBuildArgs = mod.mkBuildArgsFromSrc src;
 
-  cargoArtifacts = finalCraneLib.buildDepsOnly args;
+  buildCrateFromNamedData =
+    name: buildArgs:
+    let
+      cargoArtifacts = finalCraneLib.buildDepsOnly buildArgs;
 
-  buildArgs = args // {
-    inherit cargoArtifacts;
-  };
+      finalBuildArgs = buildArgs // {
+        inherit cargoArtifacts;
+      };
+
+    in
+    finalCraneLib.buildPackage finalBuildArgs;
 
 in
-{
-  inherit cargoArtifacts;
-  package = finalCraneLib.buildPackage buildArgs;
-}
+std.mapAttrs buildCrateFromNamedData crateNamedBuildArgs
