@@ -1,6 +1,4 @@
 {
-  pkgs ? mod.pkgs,
-  crane-lib ? mod.crane-lib,
   src,
   ...
 }:
@@ -8,22 +6,11 @@ let
   rustToolchainFilePath = (src + "/rust-toolchain.toml");
   hasToolchainFile = std.pathExists rustToolchainFilePath;
 
-  rust-bin = get.rust-overlay.lib.mkRustBin { } pkgs;
+  customToolchain = mod.mkRustupToolchainTomlFile rustToolchainFilePath;
 
-  # Modified version of rust-overlay's fromRustupToolchainTomlFile which only supports
-  # the toml rust-toolchain file - Send upstream?
-  fromRustupToolchainTomlFile =
-    path:
-    let
-      fileData = std.fromTOML (std.readFile path);
-    in
-    rust-bin.fromRustupToolchain fileData.toolchain;
+  customCraneLib = mod.crane-lib.overrideToolchain customToolchain;
 
-  customToolchain = fromRustupToolchainTomlFile rustToolchainFilePath;
-
-  customCraneLib = crane-lib.overrideToolchain customToolchain;
-
-  finalCraneLib = if hasToolchainFile then customCraneLib else crane-lib;
+  finalCraneLib = if hasToolchainFile then customCraneLib else mod.crane-lib;
 
   args = { inherit src; };
 

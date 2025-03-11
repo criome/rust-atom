@@ -1,8 +1,8 @@
 let
-  inherit (get.nixpkgs-atom) pkgs;
-
+  inherit (get.nixpkgs-atom) pkgs lib;
 in
 {
-  Pkgs = pkgs;
-  Crane-lib = get.crane.mkLib pkgs;
+  inherit pkgs lib;
+  crane-lib = get.crane.mkLib pkgs;
+  readToml = path: std.fromTOML (std.readFile path);
 }
