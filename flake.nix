@@ -5,6 +5,9 @@
     atom.url = "github:LiGoldragon/atom/atomicFlake-v1";
     system.url = "github:criome/system";
 
+    src.url = "github:criome/horizons-rs";
+    src.flake = false;
+
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     nixpkgs-atom.url = "github:criome/nixpkgs-atom";

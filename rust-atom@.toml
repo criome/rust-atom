@@ -9,6 +9,10 @@ features = ["lib"]
 [backend.nix]
 fetcher = "flake-lock"
 
+[fetch.src]
+name = "src"
+type = "src"
+
 [fetch.nixpkgs-atom]
 name = "nixpkgs-atom"
 
