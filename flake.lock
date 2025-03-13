@@ -90,6 +90,7 @@
         "nixpkgs": "nixpkgs",
         "nixpkgs-atom": "nixpkgs-atom",
         "rust-overlay": "rust-overlay",
+        "src": "src",
         "system": "system"
       }
     },
@@ -110,6 +111,22 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1741723314,
+        "narHash": "sha256-iB16s6rz+diUc7GBywlp/u+YQYrAgANfbw3rbtxc8hg=",
+        "owner": "criome",
+        "repo": "horizons-rs",
+        "rev": "4a34ef47963732e654cb2bf9c7050c2ad575dab3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "criome",
+        "repo": "horizons-rs",
         "type": "github"
       }
     },
