@@ -1,0 +1,3 @@
+{
+  packages = [ mod.toolchain.dev ];
+}
