@@ -1,5 +1,5 @@
 let
-  rust-bin = get.rust-overlay.lib.mkRustBin { } mod.pkgs;
+  rust-bin = get.rust-overlay.lib.mkRustBin { } pkgs;
   inherit (rust-bin.stable.latest) default;
 
   buildArgs = mod.src.toolchainFileData.toolchain;

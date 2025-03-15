@@ -2,19 +2,26 @@
 id = "rust-atom"
 version = "0.1.0"
 propagate = true
+system = true
 
-[std]
-features = ["lib"]
+[features]
+default = ["lib", "pkgs"]
 
 [backend.nix]
 fetcher = "flake-lock"
+
+[fetch.lib]
+name = "nixpkgs-lib"
+type = "import"
+subdir = "lib"
 
 [fetch.src]
 name = "src"
 type = "src"
 
-[fetch.nixpkgs-atom]
-name = "nixpkgs-atom"
+[fetch.pkgs]
+name = "nixpkgs"
+type = "pkgs"
 
 [fetch.crane]
 name = "crane"

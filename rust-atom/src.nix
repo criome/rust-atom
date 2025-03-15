@@ -1,5 +1,5 @@
 let
-  cleaned = mod.lib.cleanSourceWith {
+  cleaned = lib.cleanSourceWith {
     src = get.src;
     filter = mod.crane-lib.filterCargoSources;
   };
@@ -20,7 +20,7 @@ let
         };
       mkNamedMembersCargoData = std.map mkNamedMemberData cargoData.root.workspace.members;
     in
-    mod.lib.listToAttrs mkNamedMembersCargoData;
+    lib.listToAttrs mkNamedMembersCargoData;
 
   singleMemberCargoData = {
     ${cargoData.root.package.name} = cargoData.root;
