@@ -5,7 +5,10 @@ let
   buildArgs = mod.src.toolchainFileData.toolchain;
 
   devArgs = buildArgs // {
-    components = [ "rust-analyzer" ];
+    components = [
+      "rust-analyzer"
+      "rust-src"
+    ];
   };
 
   devFromToolchainFile = rust-bin.fromRustupToolchain devArgs;
