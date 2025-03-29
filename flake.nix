@@ -8,7 +8,7 @@
     nixpkgs-lib.url = "github:nix-community/nixpkgs.lib";
     nixpkgs-lib.flake = false;
 
-    src.url = "github:criome/horizons-rs";
+    src.url = "github:superatomic/xshe";
     src.flake = false;
 
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
