@@ -2,7 +2,8 @@
   description = "rust-atom";
 
   inputs = {
-    atom.url = "github:LiGoldragon/atom/atomicFlake-v1";
+    make-atom.url = "github:criome/make-atom/testing";
+
     system.url = "github:criome/system";
 
     nixpkgs-lib.url = "github:nix-community/nixpkgs.lib";
@@ -19,5 +20,21 @@
     rust-overlay.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs: inputs.atom.mkAtomicFlake inputs (./. + "/rust-atom@.toml");
+  outputs =
+    inputs:
+    inputs.make-atom.mkAtom {
+      args.atomSrc = ./.;
+      args.atomName = "rust-atom";
+
+      system = inputs.system.value;
+
+      local-registry = {
+        inherit (inputs)
+          nixpkgs
+          nixpkgs-lib
+          crane
+          rust-overlay
+          ;
+      };
+    };
 }

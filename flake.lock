@@ -1,21 +1,5 @@
 {
   "nodes": {
-    "atom": {
-      "locked": {
-        "lastModified": 1742054527,
-        "narHash": "sha256-1gPmkuL4PPBfFUyG6GqkoP8gFz9RwscuE8tQoLV8R58=",
-        "owner": "LiGoldragon",
-        "repo": "atom",
-        "rev": "4ec32cb657b15f82a2646ab184ad53ed78c2aa11",
-        "type": "github"
-      },
-      "original": {
-        "owner": "LiGoldragon",
-        "ref": "atomicFlake-v1",
-        "repo": "atom",
-        "type": "github"
-      }
-    },
     "crane": {
       "locked": {
         "lastModified": 1741481578,
@@ -28,6 +12,22 @@
       "original": {
         "owner": "ipetkov",
         "repo": "crane",
+        "type": "github"
+      }
+    },
+    "make-atom": {
+      "locked": {
+        "lastModified": 1744993737,
+        "narHash": "sha256-inchzOIyFmAPxON7whDYJYvOmSdRn2Wij4GZp4yGdn8=",
+        "owner": "criome",
+        "repo": "make-atom",
+        "rev": "dfee7f5c1e8c389a278a4e1d24dc654ccf9ee5f9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "criome",
+        "ref": "testing",
+        "repo": "make-atom",
         "type": "github"
       }
     },
@@ -65,8 +65,8 @@
     },
     "root": {
       "inputs": {
-        "atom": "atom",
         "crane": "crane",
+        "make-atom": "make-atom",
         "nixpkgs": "nixpkgs",
         "nixpkgs-lib": "nixpkgs-lib",
         "rust-overlay": "rust-overlay",
